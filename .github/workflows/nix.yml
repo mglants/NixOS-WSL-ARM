@@ -21,6 +21,7 @@ jobs:
             extra-platforms = aarch64-linux
 
       - uses: DeterminateSystems/magic-nix-cache-action@main
+
       - uses: DeterminateSystems/flake-checker-action@v8
 
       - run: nix flake check --all-systems

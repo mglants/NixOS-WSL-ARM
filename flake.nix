@@ -38,9 +38,6 @@
             nixpkgs.config.allowUnsupportedSystem = true;
             nixpkgs.hostPlatform.system = "aarch64-linux";
             nixpkgs.buildPlatform.system = "x86_64-linux";
-
-            # boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
-            # wsl.interop.register = true;
           }
           {
             wsl.enable = true;

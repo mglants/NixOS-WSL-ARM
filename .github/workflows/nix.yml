@@ -23,7 +23,7 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - uses: DeterminateSystems/flake-checker-action@v8
 
-      - run: nix flake check
-      - run: nix build
-      - run: nix run
+      - run: nix flake check --all-systems
+      - run: nix build --system aarch64-linux
+      - run: nix run --system aarch64-linux
         continue-on-error: true

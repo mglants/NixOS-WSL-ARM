@@ -40,6 +40,7 @@
             nixpkgs.buildPlatform.system = "x86_64-linux";
 
             boot.binfmt.emulatedSystems = [ "riscv64-linux" ];
+            wsl.interop.register = true;
           }
           {
             wsl.enable = true;

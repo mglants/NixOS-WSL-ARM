@@ -22,6 +22,7 @@
           nixos-wsl.nixosModules.default
           {
             wsl.enable = true;
+            wsl.nativeSystemd = true;
             system.stateVersion = "24.05";
           }
           {

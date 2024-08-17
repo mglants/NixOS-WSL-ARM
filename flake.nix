@@ -1,8 +1,8 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-24.05";
     nixos-wsl = {
-      url = "github:nix-community/NixOS-WSL?ref=main";
+      url = "github:nix-community/NixOS-WSL?ref=2405.5.4";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

@@ -24,6 +24,9 @@ jobs:
       - uses: DeterminateSystems/flake-checker-action@v8
 
       - run: nix flake check --all-systems
+
       - run: nix build --system aarch64-linux
-      - run: nix run --system aarch64-linux
-        continue-on-error: true
+
+      - name: Build WSL tarball
+        run: |
+          sudo ./result/bin/nixos-wsl-tarball-builder

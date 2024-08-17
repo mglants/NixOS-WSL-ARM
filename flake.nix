@@ -20,16 +20,10 @@
         system = "aarch64-linux";
         modules = [
           nixos-wsl.nixosModules.default
+          ./configuration.nix
           {
-            wsl.enable = true;
-            wsl.nativeSystemd = true;
-            system.stateVersion = "24.05";
-          }
-          {
-            nix.settings.experimental-features = [
-              "nix-command"
-              "flakes"
-            ];
+            nix.settings.nix-path = "nixpkgs=flake:NixOS/nixpkgs:nixos-wsl=flake:nix-community/NixOS-WSL";
+            wsl.tarball.configPath = ./configuration.nix;
           }
         ];
       };

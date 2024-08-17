@@ -31,7 +31,6 @@
       };
 
       nixosConfigurations.nixos-x86_64 = nixpkgs.lib.nixosSystem {
-        # system = "aarch64-linux";
         modules = [
           nixos-wsl.nixosModules.default
           {

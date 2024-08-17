@@ -11,6 +11,9 @@
     packages.aarch64-linux.default =
       self.nixosConfigurations.nixos.config.system.build.tarballBuilder;
 
+    packages.x86_64-linux.default =
+      self.nixosConfigurations.nixos.config.system.build.tarballBuilder;
+
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "aarch64-linux";
       modules = [

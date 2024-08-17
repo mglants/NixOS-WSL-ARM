@@ -31,3 +31,10 @@ jobs:
       - name: Build WSL tarball
         run: |
           sudo ./result/bin/nixos-wsl-tarball-builder
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nixos-wsl
+          path: nixos-wsl.tar.gz
+          compression-level: 0
+          if-no-files-found: error

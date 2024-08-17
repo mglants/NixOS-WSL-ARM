@@ -21,10 +21,7 @@
         modules = [
           nixos-wsl.nixosModules.default
           ./configuration.nix
-          {
-            # nix.settings.nix-path = "nixpkgs=flake:NixOS/nixpkgs:nixos-wsl=flake:nix-community/NixOS-WSL";
-            wsl.tarball.configPath = ./.;
-          }
+          { wsl.tarball.configPath = ./.; }
         ];
       };
     };

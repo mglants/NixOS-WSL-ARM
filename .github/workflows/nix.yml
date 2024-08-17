@@ -15,6 +15,10 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - uses: DeterminateSystems/flake-checker-action@v8
 
+      - uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64
+
       - run: nix flake check
       - run: nix build
       - run: nix run

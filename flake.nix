@@ -22,7 +22,8 @@
           nixos-wsl.nixosModules.default
           {
             wsl.enable = true;
-            wsl.defaultUser = "nixos";
+            wsl.defaultUser = "mglants";
+            networking.hostName = "SPeaceBook";
             wsl.nativeSystemd = true;
             wsl.tarball.configPath = ./.;
 
